@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "../../components/Home/Navbar";
 import Hero from "../../components/Home/Hero";
 import MostPopularArtist from "../../components/Home/MostPopularArtist";
@@ -7,6 +6,8 @@ import Divider from "../../components/utils/Divider";
 import Numbers from "../../components/Home/Numbers";
 import NftExperience from "../../components/Home/NftExperience";
 import AllAbout from "../../components/Home/AllAbout";
+import Nftmarketplace from "../../components/Home/Nftmarketplace";
+import Footer from "../../components/Home/Footer";
 
 const Homepage = () => {
   return (
@@ -17,11 +18,17 @@ const Homepage = () => {
         <MostPopularArtist />
         <Divider />
         <Discover />
-        <Divider />
-        <Numbers />
-              <NftExperience />
-              <AllAbout />
       </div>
+      <Divider />
+      <div className="md:px-32">
+        <Numbers />
+      </div>
+      <NftExperience />
+      <div className="px-10">
+        <AllAbout />
+      </div>
+      <Nftmarketplace />
+      <Footer />
     </div>
   );
 };

@@ -1,4 +1,3 @@
-import React from "react";
 import HumanHead from "../../assets/images/humanHead.svg";
 import JacksonMiller from "../../assets/images/jacksonmiller.svg";
 import HumanSleeping from "../../assets/images/humansleeping.svg";
@@ -44,7 +43,7 @@ const MostPopularArtist = () => {
         The week's most popular artists across all genres
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8 text-[12px]">
         {artists.map((artist, index) => (
           <div key={index} className="flex flex-col items-center">
             <img
@@ -57,11 +56,11 @@ const MostPopularArtist = () => {
                 <img
                   src={artist.image}
                   alt={`${artist.name}'s profile`}
-                  className="h-[50px] w-[50px] border-black rounded-full"
+                  className="h-[30px] w-[30px] border-black rounded-full"
                 />
                 <div className="ml-2 flex-1">
                   <p className="font-bold">{artist.name}</p>
-                  <p className="text-sm text-gray-500">{artist.collection}</p>
+                  <p className="text-sm text-gray-500 text-[10px]">{artist.collection}</p>
                 </div>
                 <button className="bg-[#6FEDD6] font-bold text-xs border-black border-2 px-3 py-1 rounded whitespace-nowrap">
                   Follow

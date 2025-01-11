@@ -1,5 +1,3 @@
-import React from "react";
-
 const numberCount = [
   {
     number: "300k",
@@ -21,12 +19,16 @@ const numberCount = [
 
 const Numbers = () => {
   return (
-    <div className="">
-      <div className="flex justify-between mx-32">
+    <div className="px-4 md:py-8">
+      <div className="grid grid-cols-4 md:gap-8 justify-center items-center">
         {numberCount?.map((item, index) => (
           <div className="flex flex-col items-center" key={index}>
-            <div className="text-6xl font-poppins">{item.number}</div>
-            <div className="text-lg">{item.title}</div>
+            <div className="text-2xl md:text-4xl font-poppins font-bold">
+              {item.number}
+            </div>
+            <div className="text-sm sm:text-base md:text-lg text-gray-600">
+              {item.title}
+            </div>
           </div>
         ))}
       </div>
