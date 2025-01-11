@@ -1,4 +1,5 @@
 import React from "react";
+import BrainImg from "../../assets/images/brain.svg";
 
 const Hero = () => {
   return (
@@ -23,7 +24,27 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="w-[50%] bg-[#FFC900] border-2 border-l-0 borer-top border-black items-center flex jusitfy-center h-[30rem]"></div>
+      <div className="w-[50%] bg-[#FFC900] border-2 border-l-0 borer-top border-black items-center flex-col flex p-10 jusitfy-center h-[30rem]">
+        <div className="flex justify-center">
+          <img
+            src={BrainImg}
+            alt="brain-img"
+            className="h-[300px] object-cover border-b border-black border-2 w-[300px]"
+          />
+        </div>
+
+        <div className="p-4 w-[300px] bg-white font-bold border-2 pt-5 border-black">
+          <div className="flex justify-between flex-row items-center">
+            <div className="flex flex-col ">
+              <div>Robot Arm</div>
+              <div>By Scolep More</div>
+            </div>
+            <div className="bg-[#FF90E8] border-black border-2 p-5 font-medium">
+              5 ETH
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
