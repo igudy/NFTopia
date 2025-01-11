@@ -8,25 +8,26 @@ import Girl from "../../assets/images/girl.svg";
 import RobotGirl from "../../assets/images/robotguy.svg";
 
 const artists = [
-    {
-      img: HumanHead,
+  {
+    img: HumanHead,
     name: "Jackson Miller",
     collection: "5622 Collection",
     image: JacksonMiller,
   },
-    {
-      img: HumanSleeping,
+  {
+    img: HumanSleeping,
     name: "Sophia Carter",
     collection: "4210 Collection",
     image: Brok,
   },
-  {img:Girl,
+  {
+    img: Girl,
     name: "Ethan Moore",
     collection: "3148 Collection",
     image: RobotGirl,
   },
-    {
-      img: MouthGuy,
+  {
+    img: MouthGuy,
     name: "Emma Wilson",
     collection: "2805 Collection",
     image: Brok,

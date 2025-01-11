@@ -127,14 +127,11 @@ const Discover = () => {
           {popularNFTs?.map((item) => (
             <div key={item.id}>
               <div
-                className="flex flex-col border-black
-                              border-2"
-              >
+                className="flex flex-col border-black border-2">
                 <img
                   src={item.img}
                   alt={`${item.name}`}
-                  className=" h-full w-full object-cover
-                              "
+                  className=" h-full w-full object-cover"
                 />
                 <div className="flex flex-col gap-2 p-4">
                   <div className="font-bold">{item.name}</div>
@@ -142,14 +139,18 @@ const Discover = () => {
                     <span className="font-light">Current bid:</span> {item.name}
                   </div>
 
-                  <div className="border-black w-full border-[0.6px]"></div>
+                  <div className="bg-black w-full h-[0.2px]"></div>
 
-                  <div className="flex justify-between mx-4 text-[12px] items-center">
+                  <div className="flex justify-between text-[12px] mt-1 items-center">
                     <div className="flex gap-3 items-center">
-                      <img src={item.img2} alt={`${item.handle}`}  className="rounded-full w-7 h-7"/>
+                      <img
+                        src={item.img2}
+                        alt={`${item.handle}`}
+                        className="rounded-full w-7 h-7"
+                      />
                       @{item.handle}
                     </div>
-                    <div>{item.time}</div>
+                    <div className="bg-[#FFDF68] p-1 border-black border-2">{item.time}</div>
                   </div>
                 </div>
               </div>
