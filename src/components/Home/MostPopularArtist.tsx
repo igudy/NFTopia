@@ -41,7 +41,7 @@ const MostPopularArtist = () => {
         Most Popular Artists
       </h2>
       <p className="my-2 text-center text-gray-600">
-        The week's most popular artists across all genres
+        The week's most popular artists across all genres.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8 text-[12px]">
