@@ -1,17 +1,16 @@
 import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 
 const Footer = () => {
   const footerRef = useRef(null);
-  const isInView = useInView(footerRef, { margin: "0px 0px 0% 0px" });
 
   return (
     <motion.div
       ref={footerRef}
       className="bg-[#E6E6E6] border-2 items-center justify-center border-black border-l-0 border-r-0 border-t-0 h-full md:h-[10rem] pt-10"
       initial={{ opacity: 0 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
       <div className="flex items-center justify-center">
@@ -19,7 +18,7 @@ const Footer = () => {
           <motion.div
             className="text-[12px] text-center md:text-left"
             initial={{ y: -50, opacity: 0 }}
-            animate={isInView ? { y: 0, opacity: 1 } : { y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
             Subscribe to get news update about NFTs
@@ -28,14 +27,14 @@ const Footer = () => {
           <motion.div
             className="flex md:flex-row flex-col gap-10 items-center"
             initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 1 }}
           >
             {/* Subscription Input and Button */}
             <motion.div
               className="flex items-center"
               initial={{ x: -50, opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1 }}
             >
               <input
@@ -52,7 +51,7 @@ const Footer = () => {
             <motion.div
               className="flex flex-col"
               initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
             >
               <div className="flex gap-4 my-2 justify-center md:justify-end text-gray-500 text-xl">
@@ -89,7 +88,7 @@ const Footer = () => {
               <motion.div
                 className="text-[12px]"
                 initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{ delay: 0.7, duration: 1 }}
               >
                 © 2025 by Logo Furniture. All rights reserved.

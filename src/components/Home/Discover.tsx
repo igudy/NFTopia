@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { motion } from "framer-motion";
 import JacksonMiller from "../../assets/images/jacksonmiller.svg";
 import RobotGirl from "../../assets/images/robotguy.svg";
