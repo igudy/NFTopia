@@ -1,4 +1,4 @@
-import HumanHead from "../../assets/images/humanHead.svg";
+import HumanHead from "../../assets/images/humanhead.svg";
 import JacksonMiller from "../../assets/images/jacksonmiller.svg";
 import HumanSleeping from "../../assets/images/humansleeping.svg";
 import Brok from "../../assets/images/brokshim.svg";
