@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import JacksonMiller from "../../assets/images/jacksonmiller.svg";
 import RobotGirl from "../../assets/images/robotguy.svg";
 import Brok from "../../assets/images/brokshim.svg";
-
 import Abstract1 from "../../assets/images/abstract1.png";
 import Abstract2 from "../../assets/images/abstract2.png";
 import Abstract3 from "../../assets/images/abstract3.png";
@@ -95,17 +95,27 @@ const Discover = () => {
   return (
     <div className="my-10 px-4">
       {/* Top Section */}
-      <h2 className="font-poppins font-medium text-3xl text-center">
+      <motion.h2
+        className="font-poppins font-medium text-3xl text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 1 }}
+      >
         Discover the most popular NFTs
-      </h2>
-      <p className="my-2 text-center text-gray-600">
+      </motion.h2>
+      <motion.p
+        className="my-2 text-center text-gray-600"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 1 }}
+      >
         Discover a revolutionary digital art experience at our NFT Website
-      </p>
+      </motion.p>
 
       {/* Sections */}
       <div className="flex justify-center gap-3 flex-wrap whitespace-nowrap py-4">
         {section?.map((section) => (
-          <div
+          <motion.div
             key={section.id}
             onClick={() => setActiveSection(section.section)}
             className={`px-4 cursor-pointer py-2 border-2 rounded-full inline-block ${
@@ -113,48 +123,66 @@ const Discover = () => {
                 ? "bg-pink-500 text-white border-pink-500"
                 : "border-black"
             }`}
+            whileHover={{
+              scale: 1.1,
+              textShadow: "0px 0px 8px rgba(255, 255, 255, 0.6)",
+              boxShadow: "0px 0px 15px rgba(255, 255, 255, 0.2)",
+            }}
+            transition={{ type: "spring", stiffness: 200 }}
           >
             {section?.section}
-          </div>
+          </motion.div>
         ))}
       </div>
 
       {/* NFT Cards */}
-      <div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
-          {filteredNFTs?.map((item) => (
-            <div key={item.id} className="flex flex-col border-black border-2">
-              <img
-                src={item.img}
-                alt={`${item.name}`}
-                className="h-60 w-full object-cover"
-              />
-              <div className="flex flex-col gap-2 p-4">
-                <div className="font-bold">{item.name}</div>
-                <div className="font-medium">
-                  <span className="font-light">Current bid:</span> {item.bid}
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6, duration: 1 }}
+      >
+        {filteredNFTs?.map((item) => (
+          <motion.div
+            key={item.id}
+            className="flex cursor-pointer flex-col border-black border-2"
+            whileHover={{ scale: 1.05, y: -10 }}
+            transition={{
+              type: "spring",
+              stiffness: 200,
+              damping: 20,
+            }}
+          >
+            <img
+              src={item.img}
+              alt={`${item.name}`}
+              className="h-60 w-full object-cover"
+            />
+            <div className="flex flex-col gap-2 p-4">
+              <div className="font-bold">{item.name}</div>
+              <div className="font-medium">
+                <span className="font-light">Current bid:</span> {item.bid}
+              </div>
+
+              <div className="bg-black w-full h-[1px]"></div>
+
+              <div className="flex justify-between text-[12px] mt-1 items-center">
+                <div className="flex gap-3 items-center">
+                  <img
+                    src={item.img2}
+                    alt={`${item.handle}`}
+                    className="rounded-full w-7 h-7"
+                  />
+                  @{item.handle}
                 </div>
-
-                <div className="bg-black w-full h-[1px]"></div>
-
-                <div className="flex justify-between text-[12px] mt-1 items-center">
-                  <div className="flex gap-3 items-center">
-                    <img
-                      src={item.img2}
-                      alt={`${item.handle}`}
-                      className="rounded-full w-7 h-7"
-                    />
-                    @{item.handle}
-                  </div>
-                  <div className="bg-[#FFDF68] p-1 border-black border-2">
-                    {item.time}
-                  </div>
+                <div className="bg-[#FFDF68] p-1 border-black border-2">
+                  {item.time}
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      </div>
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 };
